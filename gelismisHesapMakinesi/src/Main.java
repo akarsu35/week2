@@ -11,7 +11,7 @@ public class Main {
 8- Dikdörtgen Alan ve Çevre Hesabı*/
 
     //toplama işlemi
-    static int plus() {
+    static void plus() {
         Scanner input = new Scanner(System.in);
         System.out.println("kaç adet sayı gireceksiniz: ");
         int n = input.nextInt();
@@ -24,7 +24,7 @@ public class Main {
 
         }
         System.out.println("toplam: " + result);
-        return result;
+
 
     }
     //çıkarma işlemi
