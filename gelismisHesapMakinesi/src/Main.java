@@ -29,14 +29,14 @@ public class Main {
     }
     //çıkarma işlemi
     static void minus() {
-        Scanner scan = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int n = scan.nextInt();
+        int n = input.nextInt();
         int number, result = 0;
 
         for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
-            number = scan.nextInt();
+            number = input.nextInt();
             if (n == 1) {
                 result += number;
                 continue;
@@ -48,14 +48,14 @@ public class Main {
     }
     //çarpma  işlemi
     static void times(){
-        Scanner scan=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int n = scan.nextInt();
+        int n = input.nextInt();
         int number, result = 1;
 
         for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
-            number = scan.nextInt();
+            number = input.nextInt();
             if (n == 1) {
                 result *= number;
                 continue;
@@ -67,15 +67,15 @@ public class Main {
     }
     //bölme işlemi
     static void divided() {
-        Scanner scan=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int n= scan.nextInt();
+        int n= input.nextInt();
         int number;
         double result=1.0;
 
         for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
-            number = scan.nextInt();
+            number = input.nextInt();
             if (n == 1) {
                 System.out.println("bölen girmelisiniz: ");
                 result=number;
