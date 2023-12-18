@@ -31,13 +31,13 @@ public class Main {
     static void minus() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int counter = scan.nextInt();
+        int n = scan.nextInt();
         int number, result = 0;
 
-        for (int i = 1; i <= counter; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
             number = scan.nextInt();
-            if (i == 1) {
+            if (n == 1) {
                 result += number;
                 continue;
             }
@@ -50,13 +50,13 @@ public class Main {
     static void times(){
         Scanner scan=new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int counter = scan.nextInt();
+        int n = scan.nextInt();
         int number, result = 1;
 
-        for (int i = 1; i <= counter; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
             number = scan.nextInt();
-            if (i == 1) {
+            if (n == 1) {
                 result *= number;
                 continue;
             }
@@ -69,22 +69,27 @@ public class Main {
     static void divided() {
         Scanner scan=new Scanner(System.in);
         System.out.print("Kaç adet sayı gireceksiniz :");
-        int counter = scan.nextInt();
+        int n= scan.nextInt();
         int number;
         double result=1.0;
 
-        for (int i = 1; i <= counter; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.print(i + ". sayı :");
-           number = scan.nextInt();
-            if (i == 1) {
+            number = scan.nextInt();
+            if (n == 1) {
                 System.out.println("bölen girmelisiniz: ");
                 result=number;
                 continue;
-            }else if(number==0){
+            }
+            if(i!=1&&number==0){
                 System.out.println("sayı 0'a bölünemez.");
+                break;
+            }
+            if(i==1){
+                result=number;
                 continue;
             }
-            result /= number;
+            result /=number;
         }
 
         System.out.println("Sonuç : " + result);
