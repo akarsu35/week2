@@ -11,58 +11,83 @@ public class Main {
 8- Dikdörtgen Alan ve Çevre Hesabı*/
 
     //toplama işlemi
-    static int  plus(int a,int b){
-        Scanner input=new Scanner(System.in);
-        System.out.println("ilk sayı: ");
-        a=input.nextInt();
-        System.out.println("ikinci sayı: ");
-        b=input.nextInt();
-        int result=(a+b);
-        System.out.println("toplam: "+result);
+    static int plus() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("kaç adet sayı gireceksiniz: ");
+        int n = input.nextInt();
+        int result = 0;
+        for (int i = 1; i <= n; i++) {
+            int number;
+            System.out.println(i+". sayı: ");
+            number = input.nextInt();
+            result += number;
+
+        }
+        System.out.println("toplam: " + result);
         return result;
 
     }
     //çıkarma işlemi
-    static int minus(int a,int b){
-        Scanner input=new Scanner(System.in);
-        System.out.println("ilk sayı: ");
-        a=input.nextInt();
-        System.out.println("ikinci sayı: ");
-        b=input.nextInt();
-        int result=(a-b);
-        System.out.println("fark: "+result);
-        return result;
-    }
-    //çarpma  işlemi
-    static double times(int a,int b){
-        Scanner input=new Scanner(System.in);
-        System.out.println("ilk sayı: ");
-        a=input.nextInt();
-        System.out.println("ikinci sayı: ");
-        b=input.nextInt();
-        int result=(a*b);
-        System.out.println("çarpım: "+result);
-        return result;
-    }
-    //bölme işlemi
-    static double divided(double a,double b) {
-        Scanner input=new Scanner(System.in);
-        System.out.println("ilk sayı: ");
-        a= input.nextDouble();
-        System.out.println("ikinci sayı: ");
-        b= input.nextDouble();
-        double result=a/b;
-        //bir sayının 0'a bölümü tanımsızdır.
-        if (b == 0) {
-            System.out.println("bölen sayı 0 olamaz.");
-            return 0;
-        } else {
-            result = (a / b);
-            System.out.println("bölüm: " + result);
+    static void minus() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz :");
+        int counter = scan.nextInt();
+        int number, result = 0;
 
+        for (int i = 1; i <= counter; i++) {
+            System.out.print(i + ". sayı :");
+            number = scan.nextInt();
+            if (i == 1) {
+                result += number;
+                continue;
+            }
+            result -= number;
         }
 
-        return result;
+        System.out.println("Sonuç : " + result);
+    }
+    //çarpma  işlemi
+    static void times(){
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz :");
+        int counter = scan.nextInt();
+        int number, result = 1;
+
+        for (int i = 1; i <= counter; i++) {
+            System.out.print(i + ". sayı :");
+            number = scan.nextInt();
+            if (i == 1) {
+                result *= number;
+                continue;
+            }
+            result *= number;
+        }
+
+        System.out.println("Sonuç : " + result);
+    }
+    //bölme işlemi
+    static void divided() {
+        Scanner scan=new Scanner(System.in);
+        System.out.print("Kaç adet sayı gireceksiniz :");
+        int counter = scan.nextInt();
+        int number;
+        double result=1.0;
+
+        for (int i = 1; i <= counter; i++) {
+            System.out.print(i + ". sayı :");
+           number = scan.nextInt();
+            if (i == 1) {
+                System.out.println("bölen girmelisiniz: ");
+                result=number;
+                continue;
+            }else if(number==0){
+                System.out.println("sayı 0'a bölünemez.");
+                continue;
+            }
+            result /= number;
+        }
+
+        System.out.println("Sonuç : " + result);
     }
     //üs alma işlemi
     static int pow(int a,int b){
@@ -136,19 +161,19 @@ public class Main {
                 case 1:
 
 
-                    plus(1,1);
+                    plus();
                     break;
                 case 2:
 
-                    minus(1,1);
+                    minus();
                     break;
                 case 3:
 
-                    times(1,1);
+                    times();
                     break;
                 case 4:
 
-                    divided(1,1);
+                    divided();
                     break;
                 case 5:
 
