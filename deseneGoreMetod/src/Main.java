@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Main {
 
     // Recursive method to apply the specified rule
-    static int applyRule(int n) {
+    static void applyRule(int n) {
         // Base case: If n is 0 or negative, return
         if (n <= 0) {
             System.out.println(n + " ");
-            return 1;
+            return ;
         }
 
         // Print the current value
@@ -18,7 +18,7 @@ public class Main {
 
         // Print the current value again after the recursive call
         System.out.println(n + " ");
-        return 1 ;
+        return  ;
     }
 
     public static void main(String[] args) {
