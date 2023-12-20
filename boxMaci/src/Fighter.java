@@ -1,11 +1,11 @@
 public class Fighter {
     String name;
     int damage;
-    int health;
-    int weight;
-    double dodge;
-    double f1Choose;
-    double f2Choose;
+    int health;//sağlık durumu
+    int weight;//ağırlığı
+    double dodge;//saldırıyı bloke etme
+    double f1Choose;//1.sporcunun seçimi
+    double f2Choose;//2.sporcunun seçimi
     Fighter(String name,int damage,int health,int weight,int dodge){
         this.name=name;
         this.damage=damage;
@@ -18,11 +18,6 @@ public class Fighter {
         }
         this.f2Choose=f2Choose;
         this.f1Choose=f1Choose;
-
-
-
-
-
 
     }
     int hit(Fighter foe){
@@ -43,11 +38,13 @@ public class Fighter {
 
     }
 
-    boolean isDodge(){
+    boolean isDodge(){//saldırının bloklanması.
         double randomNumber=Math.random()*100;
         return randomNumber<=this.dodge;
     }
-    public boolean isFighter(){
+    public boolean isFighter(){//raunda hangi sporcunun önce başlayacağının random seçimi.
+        //true:f1 önce başlayacak
+        //false:f2 önce başlayacak.
         double rondomFightNumber=Math.random();
         return rondomFightNumber<=0.5;
     }

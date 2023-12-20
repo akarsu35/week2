@@ -11,20 +11,20 @@ public class Match {
         this.maxWeight=maxWeight;
 
     }
-    void  run(){
+    void  run(){//raund başlangıç sorgulaması
         if(isCheck()){
 
             while(this.f1.health>0&&this.f2.health>0){
                 System.out.println("=========YENİ RAUND=========");
 
-                if(f1.isFighter()){
+                if(f1.isFighter()){//f1 sporcusu  önce başlar
                     //System.out.println("marc seçildi");
                     this.f2.health=this.f1.hit(f2);
                 }
-                if(isWin()) {
+                if(isWin()) {//kazananı sorgulama
                     break;
                 }
-                else{
+                else{//f2 sporcusu önce başlar.
                    // System.out.println("alex seçildi.");
                     this.f1.health=this.f2.hit(f1);
                 }
@@ -47,7 +47,7 @@ public class Match {
     boolean isCheck(){
         return (this.f1.weight>=minWeight&&this.f1.weight<=maxWeight)&&(this.f2.weight>=minWeight&&this.f2.weight<=maxWeight);
     }
-    boolean isWin(){
+    boolean isWin(){//kazananın sorgulanması.
         if(this.f1.health==0){
             System.out.println(this.f2.name+" maçı kazandı!");
             return true;
