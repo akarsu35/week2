@@ -20,7 +20,7 @@ public class Main {
         Scanner input=new Scanner(System.in);
         System.out.println("bir sayı giriniz: ");
         int sayi=input.nextInt();
-        isPrime(sayi,sayi-1);//sayının 1 eksiğinden 1'e kadar bölen arayan metod.
+        isPrime(sayi,sayi-1);/* bolen değerini girilen sayıdan (sayi) bir önceki sayı ile başlatıp 1'e kadar gidiyoruz.*/
         if(isPrime(sayi,sayi-1)==false){
             System.out.println(sayi+ " sayısı asal değildir.");
         }else {

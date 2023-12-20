@@ -2,16 +2,16 @@ public class Student {
     String name,stuNo;
     int classes;
     Course mat;
-    int sozluMat;
+    int sozluMat;//matematik sözlü notu
     Course fizik;
-    int sozluFzk;
+    int sozluFzk;//fizik sözlü notu
     Course kimya;
-    int sozluKim;
+    int sozluKim;//kimya sözlü notu
     double avarage;
     boolean isPass;
-    double courseOran=0.8;
-    double sozluOran=0.2;
-    double matAvarage,fizikAvarage,kimyaAvarage;
+    double courseOran=0.8;//sınavın dersin ortalamasına etkisi
+    double sozluOran=0.2;//sözlünün dersin ortalamasına etkisi
+    double matAvarage,fizikAvarage,kimyaAvarage;//ders ortalamaları
 
 
 
@@ -57,7 +57,7 @@ public class Student {
 
     public void isPass() {
         if (this.mat.note == 0 || this.fizik.note == 0 || this.kimya.note == 0||this.sozluMat==0||this.sozluFzk==0||this.sozluKim==0) {
-            System.out.println("Notlar tam olarak girilmemiş: "+this.name);
+            System.out.println("Notlar tam olarak girilmemiş: "+this.name);//notlardan herahngi biri 0 girilmişse
         } else {
             this.isPass = isCheckPass();
             printNote();
