@@ -10,7 +10,7 @@ public class Main {
         return false;
     }
     public static void main(String[] args) {
-        int[] list={3,7,3,9,2,10,21,1,33,10,9,1};
+        int[] list={3,7,3,9,2,10,2,21,1,33,10,9,1};
         int[] duplicate=new int[list.length];
         int startIndex=0;
         for (int i=0;i< list.length;i++){
