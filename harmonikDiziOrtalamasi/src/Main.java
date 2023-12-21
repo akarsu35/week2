@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 
     public static void main(String[] args) {//herhangi bir dizi oluşturup metodu çağırıyoruz.
         int[] numbers = {1, 2, 3, 4, 5};
-        System.out.println(harmonik(numbers));
+        System.out.println(Arrays.toString(numbers)+" dizisinin harmonik ortalaması: "+harmonik(numbers));
 
 
     }
