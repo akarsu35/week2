@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void main(String[] args) {//herhangi bir dizi oluşturup metodu çağırıyoruz.
-        int[] numbers = {1,1,1,1};
+        int[] numbers = {1, 2, 3, 4, 5};
         System.out.println(harmonik(numbers));
 
 
