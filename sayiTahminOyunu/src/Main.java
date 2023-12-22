@@ -13,7 +13,9 @@ public class Main {
         boolean dongu=true;//while döngüsünün devamı için
 
         int randomNumber= random.nextInt(100);
-        System.out.println("random sayımız: "+randomNumber);// random sayı kontrolu için bu kodu açabilirsin
+
+        //**********************************************************
+        //System.out.println("random sayımız: "+randomNumber);// random sayı kontrolu için bu kodu açabilirsin
 
         System.out.println("Adınızı giriniz: ");
         name=input.nextLine();
