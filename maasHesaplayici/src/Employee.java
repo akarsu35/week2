@@ -5,29 +5,26 @@ public  class Employee {
 
     int hireYear ;// İşe başlangıç yılı
 
-    public Employee(String name, double salary, double workHours, int hireYear){
+    Employee(String name, double salary, double workHours, int hireYear){
         this.name=name;
         this.salary=salary;
         this.workHours=workHours;
         this.hireYear=hireYear;
 
-
-
-
     }
     /*tax() : Maaşa uygulanan vergiyi hesaplayacaktır.
     Çalışanın maaşı 1000 TL'den az ise vergi uygulanmayacaktır.
     Çalışanın maaşı 1000 TL'den fazla ise maaşının %3'ü kadar vergi uygulanacaktır.*/
-    double tax(){//net maaş üzerinden(salary)
+    public double tax(){//net maaş üzerinden(salary)
         double taxPercent=0.03;
         if(this.salary<=1000){
-            return 0;
+            return 0.0;
         }else {
             return salary*taxPercent;
         }
 
     }
-    double bonus(){//Eğer çalışan haftada 40 saatten fazla çalışmış ise fazladan çalıştığı
+    public double bonus(){//Eğer çalışan haftada 40 saatten fazla çalışmış ise fazladan çalıştığı
         // her saat başına 30 TL olacak şekilde bonus ücretleri hesaplayacaktır.
         double bonus;
         double hoursBonus=30;//40 saatten fazla saatlik çalışma ücreti
@@ -38,9 +35,9 @@ public  class Employee {
         }
         return bonus;
     }
-    double raiseSalary(){// Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2021 olarak alın.
+    public double raiseSalary(){// Çalışanın işe başlangıç yılına göre maaş artışını hesaplayacaktır. Şuan ki yılı 2021 olarak alın.
         //Eğer çalışan 10 yıldan az bir süredir çalışıyorsa maaşına %5 zam yapılacaktır.
-        double bonus;
+
         double raiseSalary;
         int year=2021;//yıl 2021
         if((year-this.hireYear)<10){
@@ -53,7 +50,7 @@ public  class Employee {
 
         return raiseSalary=0;
     }
-    String toStrings() {//Çalışana ait bilgileri ekrana bastıracaktır.
+    public void toString(Employee emp) {//Çalışana ait bilgileri ekrana bastıracaktır.
 
         System.out.println("adı-soyadı: "+name);
         System.out.println("maaşı: "+salary);
@@ -63,6 +60,7 @@ public  class Employee {
         System.out.println("bonus(extra saatler): "+bonus());
         System.out.println("maaş artışı: "+raiseSalary());
         System.out.println("toplam maaş: "+(salary+bonus()+raiseSalary()-tax()));
-        return "";
+
+
     }
 }
